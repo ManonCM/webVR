@@ -1,2 +1,2 @@
 #WebVR
-*[manonCM](../WEBVR/demovr.html)
+*[manonCM](../demovr.html)
