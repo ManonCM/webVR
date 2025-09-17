@@ -1,3 +1,3 @@
 #WebVR
-
-*[manonCM](https://manoncm.github.io/webVR/demovr.html)
+*[Test](../webVR/demovr.html)
+*[Labyrinthe](../)
