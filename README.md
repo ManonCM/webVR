@@ -1,5 +1,3 @@
 #WebVR
-
 *[Test](../webVR/demovr.html)
-
-*[Labyrinthe](../)
+*[Labyrinthe](../webVR/labyrinthe.html)
