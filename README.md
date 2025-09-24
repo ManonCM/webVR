@@ -1,6 +1,3 @@
 #WebVR
-
-*[Test](../webVR/demovr.html)
-
-*[Labyrinthe](../webVR/labyrinthe.html)
-
+*[Texture](../webVR/demovr.html)
+*[Labyrinthe](../WEBVR/labyrinthe.html)
