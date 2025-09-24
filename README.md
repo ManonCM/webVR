@@ -1,7 +1,8 @@
 
-* [Texture](../webVR/demovr.html)
+* [Texture](./demovr.html)
 
 * [Labyrinthe](./labyrinthe.html)
+
 
 
 
