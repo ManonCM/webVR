@@ -1,67 +1,133 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/@c-frame/aframe-physics-system@4.2.2/dist/aframe-physics-system.min.js"></script>
   </head>
+
   <body>
-    <a-scene physics>
-         <a-assets>
-            <img id="wall" src="asset/metal-texture.jpg">
-            <img id="floor" src="asset/floor_elevator.jpg">
-            <a-asset-item id="elevator_key" src="./asset/elevator key/elevator___elevator_key_7_mb.glb"></a-asset-item>
-            <a-asset-item id="led" src="./asset/led/lampara_led_cuadrada_2_x_2_para_techo.glb"></a-asset-item>
-            <a-asset-item id="miror" src="./asset/miror/miror.glb"></a-asset-item>
-            <a-asset-item id="elevator_door-obj" src="./asset/elevator-door/source/elevator-door/elevator-door.obj"></a-asset-item>
-            <a-asset-item id="elevator_door-mtl" src="./asset/elevator-door/source/elevator-door/elevator-door.mtl"></a-asset-item>
-            <a-asset-item id="slender" src="./asset/slender/slender_the_arrival_-_slender_man_model_fixed.glb"></a-asset-item>
-            <a-asset-item id="spider" src="./asset/spider.glb"></a-asset-item>
-        </a-assets>
+    <a-scene >
+      
+      <a-assets>
+        <img id="wall" src="asset/metal-texture.jpg">
+        <img id="floor" src="asset/floor_elevator.jpg">
 
-        <a-entity gltf-model="#led" rotation="0 0 0" position="0.75 2.6 -0.75" scale=" 1 1 1"></a-entity>
-         <a-entity gltf-model="#spider"  rotation="0 -120 180" position="-0.68886 2.64595 -0.46554" scale="0.03 0.03 0.03"></a-entity>
-         <a-entity gltf-model="./asset/spider.glb" rotation="0 -119.99999999999999 180" position="-0.68886 2.64595 -0.46554" scale="0.03 0.03 0.03"></a-entity>
-        <a-entity gltf-model="#led" rotation="0 0 0" position="0.75 2.6 0.75" scale=" 1 1 1"></a-entity>
-        <a-entity gltf-model="#led" rotation="0 0 0" position="-0.75 2.6 -0.75" scale=" 1 1 1"></a-entity>
-        <a-entity gltf-model="#led" rotation="0 0 0" position="-0.75 2.6 0.75" scale=" 1 1 1"></a-entity>
-        <a-entity gltf-model="#led" rotation="0 0 0" position="0 2.6 0 " scale=" 1 1 1"></a-entity>
-        <a-entity gltf-model="#elevator_key" rotation="0 -90 0" position="1.567 1 -1" scale=" 1.3 1.3 1.3"></a-entity>
-        <a-entity gltf-model="#miror" rotation="0 90 0" position="0 1.7 1.5" scale=" 1.5 1.9 4.2"></a-entity>
-        <a-entity scale="0.011 0.011 0.011"  rotation="0 180 0" position="0 2.25 -1.5" obj-model="obj: #elevator_door-obj; mtl: #elevator_door-mtl"></a-entity>
+        <a-asset-item id="elevator_key" src="./asset/elevator key/elevator___elevator_key_7_mb.glb"></a-asset-item>
+        <a-asset-item id="led" src="./asset/led/lampara_led_cuadrada_2_x_2_para_techo.glb"></a-asset-item>
+        <a-asset-item id="door-obj" src="./asset/elevator-door/source/elevator-door/elevator-door.obj"></a-asset-item>
+        <a-asset-item id="door-mtl" src="./asset/elevator-door/source/elevator-door/elevator-door.mtl"></a-asset-item>
+        <a-asset-item id="slender" src="./asset/slender/slender_the_arrival_-_slender_man_model_fixed.glb"></a-asset-item>
+        <a-asset-item id="spider" src="./asset/spider.glb"></a-asset-item>
+      </a-assets>
 
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="0.92312 0 -0.93369" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-1.11328 0 -0.95689" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-0.1508 0 -1.01742" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="0.43278 0 -0.78178" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-0.39062 0 -0.49832" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-0.57523 0 -0.09666" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-1.05386 0 0.08561" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="0.44951 0 0.09598" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-0.34616 0 0.86396" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="0.03696 0 0.47009" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="1.05676 0 0.47043" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="0.51702 0 0.8343" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-0.64137 0 0.34323" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="0.51702 0 0.8343" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-0.64137 0 0.34323" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-1.03635 0 0.83294" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-1.07147 0 1.14213" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-0.41099 0 1.37748" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="0.00595 0 1.10412" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="0.7422 0 1.35345" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="1.08826 0 1.07034" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="0.45005 0 -0.36046" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="-1.13646 0 -0.46927" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="1.13255 0 -0.16801" scale="0.4 0.4 0.4"></a-entity>
-         <a-entity gltf-model="#slender" rotation="0 180 0" position="1.13255 0 -0.61471" scale="0.4 0.4 0.4"></a-entity>
+      
+      <a-mixin
+        id="wallBase"
+        material="src: #wall; color: #4A4844; side: double"
+        geometry="primitive: plane; height: 2.8; width: 0.5"
+        scale="6 1 2"
+        shadow="cast: true; receive: true">
+      </a-mixin>
 
-      <a-plane src="#wall" position="0 1.25 1.5" width="4" height="4" side="double" color="#4A4844" geometry="height: 2.8; width: 0.5" scale="6 1 2"></a-plane>
-      <a-plane src="#wall" position="0 1.25 -1.5" width="4" height="4" side="double" color="#4A4844" geometry="height: 2.8; width: 0.5" scale="6 1 2"></a-plane>
-      <a-plane src="#wall" position="1.5 1.25 0" width="4" height="4" side="double" color="#4A4844" geometry="height: 2.8; width: 0.5" scale="6 1 2" rotation="0 90 0"></a-plane>
-      <a-plane src="#wall" position="-1.5 1.25 0" wdidth="4" height="4" side="double" color="#4A4844" geometry="height: 2.8; width: 0.5" scale="6 1 2" rotation="0 90 0"></a-plane>
-      <a-plane src="#floor"  rotation="-90 0 0" width="3" height="3" repeat="3 3" side="double" color="#4A4844" position="0 2.65 0"></a-plane>
-      <a-plane src="#floor" static-body position="0 0 0" rotation="-90 0 0" side="double" width="3" color="#4A4844" height="3"  repeat= "3 3" ></a-plane>
+      <a-mixin
+        id="floorBase"
+        material="src: #floor; color: #4A4844; side: double; repeat: 3 3"
+        geometry="primitive: plane; height: 3; width: 3"
+        rotation="-90 0 0"
+        shadow="cast: true; receive: true">
+      </a-mixin>
+
+     <a-mixin
+        id="slenderBase"
+        gltf-model="#slender"
+        scale="0.4 0.4 0.4"
+        rotation="0 180 0"
+        shadow="cast: true; receive: true">
+      </a-mixin>
+     <a-mixin
+        id="ledBase"
+        gltf-model="#led"
+        scale="1 1 1"
+        rotation="0 0 0"
+        shadow="cast: true">
+      </a-mixin>
+      
+      <a-light type="ambient" color="#efeac7" intensity="0.4"></a-light>
+      
+      <a-entity id="led-group">
+        <a-entity mixin="ledBase" position="0.75 2.6 -0.75">
+          <a-light type="spot" color="#efeac7" intensity="3" angle="30" penumbra="0.5"
+                   target="#floor-center" position="0 0 0" castShadow="true"></a-light>
+        </a-entity>
+
+        <a-entity mixin="ledBase" position="0.75 2.6 0.75">
+          <a-light type="spot" color="#efeac7" intensity="3" angle="30" penumbra="0.5"
+                   target="#floor-center" position="0 0 0" castShadow="true"></a-light>
+        </a-entity>
+
+        <a-entity mixin="ledBase" position="-0.75 2.6 -0.75">
+          <a-light type="spot" color="#efeac7" intensity="3" angle="30" penumbra="0.5"
+                   target="#floor-center" position="0 0 0" castShadow="true"></a-light>
+        </a-entity>
+
+        <a-entity mixin="ledBase" position="-0.75 2.6 0.75">
+          <a-light type="spot" color="#efeac7" intensity="" angle="30" penumbra="0.5"
+                   target="#floor-center" position="0 0 0" castShadow="true"></a-light>
+        </a-entity>
+
+        <a-entity mixin="ledBase" position="0 2.6 0">
+          <a-light type="spot" color="#efeac7" intensity="3" angle="30" penumbra="0.5"
+                   target="#floor-center" position="0 0 0" castShadow="true"></a-light>
+        </a-entity>
+      </a-entity>
+
+      
+      <a-entity id="floor-center" position="0 0 0"></a-entity>
+
+      
+      <a-entity gltf-model="#elevator_key" rotation="0 -90 0" position="1.567 1 -1" scale="1.3 1.3 1.3" shadow="cast: true; receive: true"></a-entity>
+     
+      <a-entity obj-model="obj: #door-obj; mtl: #door-mtl" position="0 2.25 -1.5" rotation="0 180 0" scale="0.011 0.011 0.011"shadow="cast: true; receive: true"></a-entity>
+
+      
+      <a-entity mixin="slenderBase" position="0.923 0 -0.934"></a-entity>
+      <a-entity mixin="slenderBase" position="-1.113 0 -0.957"></a-entity>
+      <a-entity mixin="slenderBase" position="-0.151 0 -1.017"></a-entity>
+      <a-entity mixin="slenderBase" position="0.433 0 -0.782"></a-entity>
+      <a-entity mixin="slenderBase" position="-0.391 0 -0.498"></a-entity>
+      <a-entity mixin="slenderBase" position="-0.575 0 -0.097"></a-entity>
+      <a-entity mixin="slenderBase" position="-1.054 0 0.086"></a-entity>
+      <a-entity mixin="slenderBase" position="0.450 0 0.096"></a-entity>
+      <a-entity mixin="slenderBase" position="-0.346 0 0.864"></a-entity>
+      <a-entity mixin="slenderBase" position="0.037 0 0.470"></a-entity>
+      <a-entity mixin="slenderBase" position="1.057 0 0.470"></a-entity>
+      <a-entity mixin="slenderBase" position="0.517 0 0.834"></a-entity>
+      <a-entity mixin="slenderBase" position="-0.641 0 0.343"></a-entity>
+      <a-entity mixin="slenderBase" position="-1.036 0 0.833"></a-entity>
+      <a-entity mixin="slenderBase" position="-1.071 0 1.142"></a-entity>
+      <a-entity mixin="slenderBase" position="-0.411 0 1.377"></a-entity>
+      <a-entity mixin="slenderBase" position="0.006 0 1.104"></a-entity>
+      <a-entity mixin="slenderBase" position="0.742 0 1.353"></a-entity>
+      <a-entity mixin="slenderBase" position="1.088 0 1.070"></a-entity>
+      <a-entity mixin="slenderBase" position="0.450 0 -0.360"></a-entity>
+      <a-entity mixin="slenderBase" position="-1.136 0 -0.469"></a-entity>
+      <a-entity mixin="slenderBase" position="1.133 0 -0.168"></a-entity>
+      <a-entity mixin="slenderBase" position="1.133 0 -0.615"></a-entity>
+
+      
+      <a-entity gltf-model="#spider" shadow="cast: true; receive: true" rotation="0 -120 180" position="-0.689 2.646 -0.466" scale="0.03 0.03 0.03"></a-entity>
+
+      
+      <a-plane mixin="wallBase" position="0 1.25 1.5"></a-plane>
+      <a-plane mixin="wallBase" position="0 1.25 -1.5"></a-plane>
+      <a-plane mixin="wallBase" position="1.5 1.25 0" rotation="0 90 0"></a-plane>
+      <a-plane mixin="wallBase" position="-1.5 1.25 0" rotation="0 90 0"></a-plane>
+
+      
+      <a-plane mixin="floorBase" position="0 0 0"></a-plane>
+      <a-plane mixin="floorBase" position="0 2.65 0"></a-plane>
+
+      
       <a-sky color="#E1E1E1"></a-sky>
-    <a-entity camera look-controls wasd-controls="acceleration:1" position="0 1.6 0"></a-entity>
+      <a-entity camera look-controls wasd-controls="acceleration:1" position="0 1.6 0"></a-entity>
     </a-scene>
   </body>
 </html>
