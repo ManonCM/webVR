@@ -5,14 +5,14 @@
 
   <body>
     <a-scene>
-      <!-- === ASSETS === -->
+      
       <a-assets>
         <img id="wall" src="https://thumbs.dreamstime.com/b/fond-de-briques-de-pierre-d%C3%A9corative-37684662.jpg">
         <img id="sky" src="https://media.istockphoto.com/id/523382283/fr/vectoriel/simple-espace-vectoriel-fond-d%C3%A9toiles.jpg?s=612x612&w=0&k=20&c=PH_EeNn2eT55_SenNfdq_YV1X3V538rmI7nSW0Lyli0=">
         <img id="floor" src="./asset/dirt.jpg">
         <a-asset-item id="centipede" src="./asset/centipede_free.glb"></a-asset-item>
 
-        <!-- === MIXINS === -->
+        
         <a-mixin
          id="wallBase"
          material="src: #wall; color: #403737; side: double"
@@ -31,7 +31,7 @@
         <a-mixin id="centipedeBase" gltf-model="#centipede" scale="5 5 5"></a-mixin>
       </a-assets>
 
-      <!-- === CENTIPÈDES === -->
+      
       <a-entity>
         <a-entity mixin="centipedeBase" rotation="57.68 0 -90" position="-0.80317 1.33998 0.35134"></a-entity>
         <a-entity mixin="centipedeBase" rotation="34.8 0 -90" position="0.36606 0.94911 0.71582"></a-entity>
@@ -41,9 +41,9 @@
         <a-entity mixin="centipedeBase" rotation="-100 90 90" position="0.99304 0.3626 -1.4991"></a-entity>
       </a-entity>
 
-      <!-- === LABYRINTHE (avec mixins) === -->
+     
       <a-entity position="0 0 4">
-        <!-- murs alignés -->
+        
         <a-plane mixin="wallBase" position="0.08 1 -3.7" scale="1.2 1 2"></a-plane>
         <a-plane mixin="wallBase" position="-0.7 1 -6" scale="1.6 1 2"></a-plane>
         <a-plane mixin="wallBase" position="-1.55 1 -6" scale="1.8 1 2"></a-plane>
@@ -78,14 +78,14 @@
         <a-plane mixin="wallBase" position="-1.4 1 -2" scale="2.4 1 2"></a-plane>
         <a-plane mixin="wallBase" position="-0.25 1 -2.5" scale="2.2 1 2"></a-plane>
 
-        <!-- Sol -->
+        
         <a-plane mixin="floorBase" position="0 0 -4" width="4" height="4"></a-plane>
       </a-entity>
 
-      <!-- === CAMÉRA === -->
+      
       <a-entity camera look-controls wasd-controls="acceleration:5" position="0 1.6 0"></a-entity>
 
-      <!-- === CIEL === -->
+      
       <a-sky src="#sky" color="#ECECEC"></a-sky>
     </a-scene>
   </body>
