@@ -7,7 +7,7 @@
 
 * [Paysage VR](./skybox.html)
 
-* [WebGL](./index.html)
+* [WebGL](./webGL.html)
 
 
 
